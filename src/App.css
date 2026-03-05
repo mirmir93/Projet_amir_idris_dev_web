@@ -1,0 +1,261 @@
+.App {
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #0056b3 0%, #00a8cc 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px 5%;
+  margin-bottom: 40px;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 800;
+  color: white; /* Changé en blanc pour contraster avec le fond bleu */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.icon-title {
+  color: white; /* Icône en blanc également */
+}
+
+main {
+  padding: 0 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #848484;
+}
+
+.search-input {
+  width: 100%;
+  padding: 18px 20px 18px 60px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 9px rgba(0,0,0,0.05);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  color: #111517;
+}
+
+.search-input::placeholder {
+  color: #c4c4c4;
+}
+
+.search-input:focus {
+  outline: 2px solid #e0e0e0;
+}
+
+.region-select {
+  padding: 18px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 9px rgba(0,0,0,0.05);
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: white;
+  color: #111517;
+  min-width: 200px;
+}
+
+.region-select:focus {
+  outline: 2px solid #e0e0e0;
+}
+
+.countries-count {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #848484;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+.country-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 9px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.country-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.flag-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-content {
+  padding: 25px 25px 35px 25px;
+}
+
+.card-content h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.card-content p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.card-content strong {
+  font-weight: 600;
+}
+
+/* ========================================================================== */
+/* VUE DÉTAILLÉE DU PAYS (BIOGRAPHIE)                                         */
+/* ========================================================================== */
+
+.country-details {
+  padding-bottom: 50px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  padding: 12px 25px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 40px;
+  transition: all 0.2s ease;
+  color: #1e293b;
+}
+
+.back-btn:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  background-color: #f8fafc;
+}
+
+.details-wrapper {
+  background-color: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+}
+
+.details-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .details-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.details-flag {
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.details-info h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.details-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 600px) {
+  .details-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.details-column p {
+  margin: 12px 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.details-column strong {
+  font-weight: 600;
+}
+
+.wiki-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #0056b3;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.wiki-link:hover {
+  background-color: #004494;
+  transform: translateY(-2px);
+}

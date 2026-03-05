@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "axios": "^1.13.6",
+    "lucide-react": "^0.577.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-scripts": "^5.0.1"
+  },
+  "name": "projet_dev_web_idris_amir",
+  "version": "1.0.0",
+  "description": "Ce projet est une application web en React permettant de rechercher des pays, d'afficher leurs détails, et de les filtrer par continent.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.4",
+    "vite": "^7.3.1"
+  }
+}
